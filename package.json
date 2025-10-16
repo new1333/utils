@@ -1,0 +1,37 @@
+{
+  "name": "@new1333/utils",
+  "version": "0.0.1",
+  "description": "Opinionated collection of common JavaScript / TypeScript utils by @new1333",
+  "keywords": [
+    "utils"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "prepublishOnly": "pnpm run build",
+    "release": "bumpp",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest"
+  },
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "bumpp": "^10.3.1",
+    "tsx": "^4.20.6",
+    "unbuild": "^3.6.1",
+    "vite": "^7.1.10",
+    "vitest": "^3.2.4"
+  }
+}
